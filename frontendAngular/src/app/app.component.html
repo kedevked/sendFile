@@ -1,0 +1,22 @@
+<div style="float: left;">
+
+  <form>
+    <fieldset>
+      <legend>Uploader un fichier</legend>
+      <p><label for="upload">Fichier</label>
+        <input id="upload" type="file" (change)="changeListener($event)"/>
+      </p>
+      <input type="submit"/>
+    </fieldset>
+  </form>
+</div>
+
+<div *ngIf="errorFileExtension===true"  id="feedbackPanel">
+  <span id="id17">
+  <ul class="feedbackPanel">
+    <li class="feedbackPanelERROR">
+      <span class="feedbackPanelERROR">Seul une archive de type zip est acceptée</span>
+    </li>
+  </ul>
+</span>
+</div>
