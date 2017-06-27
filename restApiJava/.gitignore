@@ -1,2 +1,6 @@
-.idea
+
+.idea/
+lib/
+out/
 *.iml
+target/

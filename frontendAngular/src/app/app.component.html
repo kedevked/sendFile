@@ -1,17 +1,37 @@
-<div style="float: left;">
+<div>
 
   <form>
-    <fieldset>
-      <legend>Uploader un fichier</legend>
-      <p><label for="upload">Fichier</label>
-        <input id="upload" type="file" (change)="changeListener($event)"/>
-      </p>
+
+    <div class="form-group"><label for="upload">Fichier</label>
+      <input id="upload" type="file" (change)="changeListener($event)"/>
+    </div>
+
+    <!--<div class="form-group">
+      <input type="date"/>
+    </div>-->
+
+    <!--<div class="form-group">
       <input type="submit"/>
-    </fieldset>
+    </div>-->
+
+    <!--<div class="row">
+      <div class="col-md-2"><div class="input-group">
+        <input type="date" class="form-control" id="inlineFormInputGroup">
+        <div class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></div>
+      </div></div>
+    </div>
+-->
   </form>
+
+  <!--<md-input-container>
+    <input mdInput [mdDatepicker]="picker" placeholder="Choose a date">
+    <button mdSuffix [mdDatepickerToggle]="picker"></button>
+  </md-input-container>
+  <md-datepicker #picker></md-datepicker>
+-->
 </div>
 
-<div *ngIf="errorFileExtension===true"  id="feedbackPanel">
+<!--<div *ngIf="errorFileExtension===true" id="feedbackPanel">
   <span id="id17">
   <ul class="feedbackPanel">
     <li class="feedbackPanelERROR">
@@ -19,4 +39,6 @@
     </li>
   </ul>
 </span>
-</div>
+</div>-->
+
+<button (click)="downloadfile()">Télécharger</button>
