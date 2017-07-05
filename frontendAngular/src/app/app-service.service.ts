@@ -28,6 +28,6 @@ export class AppService {
   downloadfile(filePath: string){
     return this.http
       .get( URL_API_REST + 'download?filePath='+ filePath, {responseType: ResponseContentType.ArrayBuffer})
-      .map(res =>  res['_body'])
+      .map(res =>  res)
   }
 }

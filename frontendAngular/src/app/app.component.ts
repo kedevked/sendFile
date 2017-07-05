@@ -54,22 +54,23 @@ export class AppComponent {
 
 
   getZipFile(data: any){
-    /*var a: any = document.createElement("a");
-    document.body.appendChild(a);
 
-    a.style = "display: none";
-    //var blob = new Blob([data], { type: 'application/zip' });
 
-    var url= window.URL.createObjectURL(data);
-
-    a.href = url;
-    a.download = "test.zip";
-    a.click();
-    window.URL.revokeObjectURL(url);*/
-
-    var blob = new Blob([data], { type: 'application/zip' });
+    var blob = new Blob([data['_body']], { type: 'text/plain' });
     var url= window.URL.createObjectURL(blob);
-    window.open(url);
+
+    var a: any = document.createElement("a");
+     document.body.appendChild(a);
+
+     a.style = "display: none";
+     //var blob = new Blob([data], { type: 'application/zip' });
+
+     var url= window.URL.createObjectURL(blob);
+
+     a.href = url;
+     a.download = "test";
+     a.click();
+     window.URL.revokeObjectURL(url);
 
   }
 }
